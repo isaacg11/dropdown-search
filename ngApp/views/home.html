@@ -1,0 +1,10 @@
+
+<h2>Home</h2>
+
+<select ng-model="controller.makeId" ng-change="controller.getMatchingMakes()">
+  <option ng-repeat="m in controller.makes" value="{{m.id}}">{{m.name}}</option>
+</select>
+
+<ul>
+  <li ng-repeat="m in controller.matchingMakes">{{m.ShortDescription}}</li>
+</ul>
